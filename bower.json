@@ -1,0 +1,28 @@
+{
+  "name": "pleiades-2017",
+  "description": "Pleiades 2017 National Planetarium Conference",
+  "main": "",
+  "authors": [
+    "Steven Sumichrast <s.sumichrast@mcpstars.org>"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "\"\""
+  ],
+  "homepage": "https://www.github.com/ssumichrast/pleiades-2017",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-button": "^2.0.0",
+    "paper-slider": "^2.0.2",
+    "paper-spinner": "^2.0.0",
+    "paper-toast": "^2.0.0",
+    "polymer": "Polymer/polymer#2.0.0"
+  }
+}

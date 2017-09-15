@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
 	<script type="text/javascript" src="../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 	<link rel="import" href="../bower_components/paper-button/paper-button.html">
-	<link href="../bower_components/polymer/polymer.html" rel="import">
+	<link rel="import" href="../bower_components/polymer/polymer.html">
+	<link rel="import" href="../bower_components/paper-input/paper-input.html">
+	<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
 	<style type="text/css">
 		.red
 		{
@@ -25,9 +28,13 @@
 	</script>
 </head>
 <body>
-	<paper-button raised class="green" onclick="setBug(2);">Color</paper-button>
-	<paper-button raised class="yellow" onclick="setBug(1);">B&W</paper-button>
-	<paper-button raised class="red" onclick="setBug(0);">Off</paper-button>
+	<paper-input label="Name 1"></paper-input>
+	<paper-input label="Name 2"></paper-input>
+	<paper-input label="Name 3"></paper-input>
+	<paper-input label="Name 4"></paper-input>
+	<paper-button raised class="green">Show</paper-button>
+	<paper-button raised class="yellow">Hide</paper-button>
+	<paper-button raised class="red">Auto</paper-button>
 
 </body>
 </html>

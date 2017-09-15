@@ -15,8 +15,7 @@
     "extension"
   ],
   "keywords": [
-    "",
-    "nodecg-bundle"
+    ""
   ],
   "nodecg": {
     "compatibleRange": "~0.9.0",
@@ -26,6 +25,13 @@
         "title": "Pleiades Logo Bug",
         "width": 3,
         "file": "logo-bug.html",
+        "headerColor": "#9f9bbd"
+      },
+      {
+        "name": "lower-third",
+        "title": "Lower Third Controls",
+        "width": 4,
+        "file": "lower-third.html",
         "headerColor": "#9f9bbd"
       }
     ],
