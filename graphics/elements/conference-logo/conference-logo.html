@@ -1,0 +1,28 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="conference-logo">
+    <template>
+        <style>
+            #container {
+                width: 180px;
+                height: 182px;
+                background: rgba(0, 0, 0, 0);
+            }
+            #colorLogo, #ghostLogo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+        </style>
+    
+        <div id="container">
+            <div id="colorLogo"><img src="elements/conference-logo/img/color-logo.png" /></div>
+            <div id="ghostLogo"><img src="elements/conference-logo/img/ghost-logo.png" /></div>
+        </div>
+    </template>
+
+    <script src="../../../bower_components/gsap/src/minified/TweenMax.min.js"></script>
+    <script src="conference-logo.js"></script>
+    
+</dom-module>

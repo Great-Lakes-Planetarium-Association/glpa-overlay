@@ -1,8 +1,8 @@
 {
-  "name": "pleiades-2017",
-  "version": "0.0.0",
-  "description": "Pleiades 2017 National Planetarium Conference",
-  "homepage": "http://www.pleiades2017.org",
+  "name": "glpa-overlay",
+  "version": "0.1.0",
+  "description": "GLPA Stream Overlay Bundle",
+  "homepage": "http://www.glpa.org",
   "author": {
     "name": "Steven Sumichrast",
     "email": "s.sumichrast@mcpstars.org",
@@ -14,17 +14,14 @@
     "extension.js",
     "extension"
   ],
-  "keywords": [
-    ""
-  ],
   "nodecg": {
     "compatibleRange": "~0.9.0",
     "dashboardPanels": [
       {
-        "name": "logo-bug",
-        "title": "Pleiades Logo Bug",
+        "name": "conference-logo",
+        "title": "Conference Logo Control",
         "width": 3,
-        "file": "logo-bug.html",
+        "file": "conference-logo.html",
         "headerColor": "#9f9bbd"
       },
       {
@@ -37,12 +34,13 @@
     ],
     "graphics": [
       {
-        "file": "index.html",
+        "file": "obs-overlay.html",
         "width": 1920,
         "height": 1080
       }
     ]
   },
   "repository": "https://github.com/nodecg/nodecg.git",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {}
 }

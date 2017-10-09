@@ -1,0 +1,21 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../../bower_components/paper-styles/color.html">
+
+<dom-module id="conference-logo">
+    <template>
+        <style>
+            paper-button[disabled] {
+                background-color: var(--paper-green-200);
+                color: var(--paper-black-300);
+            }
+        </style>
+        <div id="buttons">
+            <paper-button id="color" raised><span id="color-label">Color</span></paper-button>
+            <paper-button id="ghost" raised><span id="ghost-label">Ghost</span></paper-button>
+            <paper-button id="hide" raised><span id="hide-label">Hide</span></paper-button>
+        </div>
+    </template>
+
+    <script src="conference-logo.js"></script>
+</dom-module>

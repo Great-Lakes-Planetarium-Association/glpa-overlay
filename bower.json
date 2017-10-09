@@ -6,9 +6,6 @@
     "Steven Sumichrast <s.sumichrast@mcpstars.org>"
   ],
   "license": "Apache-2.0",
-  "keywords": [
-    "\"\""
-  ],
   "homepage": "https://www.github.com/ssumichrast/pleiades-2017",
   "private": true,
   "ignore": [
@@ -19,10 +16,12 @@
     "tests"
   ],
   "dependencies": {
+    "gsap": "^1.20.3",
+    "iron-icons": "^2.0.1",
     "paper-button": "^2.0.0",
-    "paper-slider": "^2.0.2",
+    "polymer": "^2.1.1",
     "paper-spinner": "^2.0.0",
-    "paper-toast": "^2.0.0",
-    "polymer": "Polymer/polymer#2.0.0"
+    "paper-icon-button": "^2.0.1",
+    "paper-input": "^2.0.2"
   }
 }

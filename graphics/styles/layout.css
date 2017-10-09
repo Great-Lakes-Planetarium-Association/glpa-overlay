@@ -1,0 +1,29 @@
+/* Pleiades NPC global graphic stylesheet */
+
+/* Draw everything for the box within the box.  duh. */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Graphics-wide body configurations */
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enforce a HD1080 resolution */
+.width1080 {
+    width: 1920px;
+    height: 1080px;
+}
+
+/* Enforce a XGA resolution */
+.width768 {
+    width: 1024px;
+    height: 768px;
+}
+
