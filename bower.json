@@ -22,6 +22,7 @@
     "polymer": "^2.1.1",
     "paper-spinner": "^2.0.0",
     "paper-icon-button": "^2.0.1",
-    "paper-input": "^2.0.2"
+    "paper-input": "^2.0.2",
+    "paper-item": "^2.0.0"
   }
 }

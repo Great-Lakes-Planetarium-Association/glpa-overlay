@@ -3,24 +3,94 @@
 <link rel="import" href="../../../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../../../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../../bower_components/paper-item/paper-item.html">
+
 
 <dom-module id="lower-third">
 	<template>
 		<style>
-			paper-button.green {
+			.horizontal {
+				display: flex;
+				flex-direction: row;
+			}
+			paper-button.take {
 				background-color: green;
 				color: white;
 			}
-			paper-button.red {
-				background-color: red;
+			paper-button.autotake {
+				background-color: orange;
 			}
 		</style>
 
-		<paper-input id='duration' type='number' value='{{ltAutoDuration}}'></paper-input>
+		<div class="presenters">
+			<h3>Program</h3>
+			<div class="presenter-program horizontal">
+				<paper-item>Name<br />{{programName}}</paper-item>
+				<paper-item>Byline<br />{{programByline}}</paper-item>
+			</div>
+			<h3>Preview</h3>
+			<h5>Presenter #1</h5>
+			<div class="presenter-1 horizontal">
+				<paper-input label="Name" id="presenter1Name">
+					<paper-icon-button icon="clear" slot="suffix" tabindex="-1"></paper-icon-button>
+				</paper-input>
+				<paper-input label="Byline" id="presenter1Byline">
+					<paper-icon-button icon="clear" slot="suffix" tabindex="-1"></paper-icon-button>
+				</paper-input>
+				<paper-button class="take" id="presenter1Take" raised>Take</paper-button>
+				<paper-button class="autotake" id="presenter1Autotake" raised>Auto</paper-button>
+			</div>
+			<h5>Presenter #2</h5>
+			<div class="presenter-2 horizontal">
+				<paper-input label="Name" id="presenter2:name" value="{{presenter2:name}}">
+					<paper-icon-button icon="clear" slot="suffix" tabindex="-1"></paper-icon-button>
+				</paper-input>
+				<paper-input label="Byline" id="presenter2:byline" value="{{presenter2:byline}}">
+					<paper-icon-button icon="clear" slot="suffix" tabindex="-1"></paper-icon-button>
+				</paper-input>
+				<paper-button class="take" id="presenter2Take" raised>Take</paper-button>
+				<paper-button class="autotake" id="presenter2Autotake" raised>Auto</paper-button>
+			</div>
+			<h5>Presenter #3</h5>
+			<div class="presenter-3 horizontal">
+				<paper-input label="Name" id="presenter3:name" value="{{presenter3:name}}">
+					<paper-icon-button icon="clear" slot="suffix" tabindex="-1"></paper-icon-button>
+				</paper-input>
+				<paper-input label="Byline" id="presenter3:byline" value="{{presenter3:byline}}">
+					<paper-icon-button icon="clear" slot="suffix" tabindex="-1"></paper-icon-button>
+				</paper-input>
+				<paper-button class="take" id="presenter3Take" raised>Take</paper-button>
+				<paper-button class="autotake" id="presenter3Autotake" raised>Auto</paper-button>
+			</div>
+			<h5>Presenter #4</h5>
+			<div class="presenter-4 horizontal">
+				<paper-input label="Name" id="presenter4:name" value="{{presenter4:name}}">
+					<paper-icon-button icon="clear" slot="suffix" tabindex="-1"></paper-icon-button>
+				</paper-input>
+				<paper-input label="Byline" id="presenter4:byline" value="{{presenter4:byline}}">
+					<paper-icon-button icon="clear" slot="suffix" tabindex="-1"></paper-icon-button>
+				</paper-input>
+				<paper-button class="take" id="presenter4Take" raised>Take</paper-button>
+				<paper-button class="autotake" id="presenter4Autotake" raised>Auto</paper-button>
+			</div>
+			<h5>Presenter #5</h5>
+			<div class="presenter-5 horizontal">
+				<paper-input label="Name"  id="presenter5:name" value="{{presenter5:name}}">
+					<paper-icon-button icon="clear" slot="suffix" tabindex="-1"></paper-icon-button>
+				</paper-input>
+				<paper-input label="Byline" id="presenter5:byline" value="{{presenter5:byline}}">
+					<paper-icon-button icon="clear" slot="suffix" tabindex="-1"></paper-icon-button>
+				</paper-input>
+				<paper-button class="take" id="presenter5Take" raised>Take</paper-button>
+				<paper-button class="autotake" id="presenter5Autotake" raised>Auto</paper-button>
+			</div>
+		</div>
+
+		<paper-input label="Auto Duration (sec)" id="duration" type='number' value='{{ltAutoDuration}}'></paper-input>
 		<div>ltAutoDuration is: {{ltAutoDuration}}</div>
 		
 		<div>Lower Third Control:
-			<paper-button id='ltToggle' raised toggles></paper-button>
+			<paper-button id="ltOff" raised>All Off</paper-button>
 		</div>
 	</template>
 

@@ -2,8 +2,10 @@
     'use strict';
     
     const ltVisible = nodecg.Replicant('ltVisible');
-    const name = nodecg.Replicant('speakerName');
-    const byline = nodecg.Replicant('speakerByline');
+    const ltPresenter = nodecg.Replicant('ltPresenter');
+    const ltTimeRemaining = nodecg.Replicant('ltTimeRemaining', {default: 0, persistent: false});
+    let interval;
+    let timer;
 
     Polymer({
         is: 'lower-third',
@@ -18,23 +20,42 @@
         },
 
         ready() {
-            name.on('change', newVal => {
-                console.log(`lower-third: Detected name change to "${newVal}".`);
-                this.name = name.value;
-            });
-            byline.on('change', newVal => {
-                console.log(`lower-third: Detected byline change to "${newVal}".`);
-                this.byline = byline.value;
-            });
+            ltPresenter.on('change', newVal => {
+                console.log(`lower-third: ltPresenter replicant updated (Name: "${newVal.name}"; Byline: "${newVal.byline}")`)
+                this.name = newVal.name;
+                this.byline = newVal.byline;
+            })
             ltVisible.on('change', newVal => {
                 console.log(`lower-third: ltVisible changed to ${ltVisible.value}.`);
-                if (newVal) {
+                if (newVal > 0) {
                     this.show();
                 } else {
                     this.hide();
                 }
             });
-            this.name = name.value;
+
+            // Listen for autotake calls
+            nodecg.listenFor('ltAuto', duration => {
+                console.log(`lower-third: performing an auto-take for ${duration} seconds`);
+                ltTimeRemaining.value = duration;
+                this.show();
+                interval = setInterval(() => {
+                    if (ltTimeRemaining.value > 0) {
+                        ltTimeRemaining.value--;
+                        console.log(`Time left: ${ltTimeRemaining.value}`);
+                    } else {
+                        clearInterval(interval);
+                        ltTimeRemaining.value = 0;
+                    }}, 
+                    1000);
+                
+                timer = setTimeout(() => {
+                    clearInterval(interval);
+                    this.hide();
+                }, duration*1000);
+
+            })
+
         },
 
         show() {
