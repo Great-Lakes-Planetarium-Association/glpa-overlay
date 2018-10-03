@@ -1,12 +1,12 @@
 {
-  "name": "pleiades-2017",
-  "description": "Pleiades 2017 National Planetarium Conference",
+  "name": "GLPA Overlay",
+  "description": "GLPA Streaming Overlay Package",
   "main": "",
   "authors": [
     "Steven Sumichrast <s.sumichrast@mcpstars.org>"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://www.github.com/ssumichrast/pleiades-2017",
+  "homepage": "https://www.glpa.org",
   "private": true,
   "ignore": [
     "**/.*",
