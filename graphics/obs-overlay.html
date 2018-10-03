@@ -5,8 +5,10 @@
 	<link rel="stylesheet" href="styles/layout.css">
 	<link rel="import" href="elements/lower-third/lower-third.html">
 	<link rel="import" href="elements/conference-logo/conference-logo.html">
-		<script src="../bower_components/gsap/src/minified/TweenMax.min.js"></script>
-		<script src="scripts/conference-logo.js"></script>
+	<script src="../bower_components/gsap/src/minified/TweenMax.min.js"></script>
+	<script src="scripts/conference-logo.js"></script>
+	<script src="scripts/lower-third.js"></script>
+	
 	<style type="text/css">
 		    lower-third {
                 top: 0;
@@ -22,7 +24,10 @@
 
 <body>
 	<div class="main">
-		<lower-third></lower-third>
+		<div class="lower-third">
+			<div class="main-line"></div>
+			<div class="second-line"></div>
+		</div>>
 		<div class="conference-bug">
 			<div id="colorLogo"><img src="img/color-logo.png" /></div>
 			<div id="ghostLogo"><img src="img/ghost-logo.png" /></div>
