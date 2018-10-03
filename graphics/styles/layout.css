@@ -13,17 +13,19 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
-}
-
-/* Enforce a HD1080 resolution */
-.width1080 {
     width: 1920px;
     height: 1080px;
 }
 
-/* Enforce a XGA resolution */
-.width768 {
-    width: 1024px;
-    height: 768px;
+/* Conference Bug CSS */
+div.conference-bug {
+    width: 180px;
+    height: 151px;
+    background: rgba(0, 0, 0, 0);
 }
-
+#colorLogo, #ghostLogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}

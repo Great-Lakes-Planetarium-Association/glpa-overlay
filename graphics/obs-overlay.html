@@ -5,6 +5,8 @@
 	<link rel="stylesheet" href="styles/layout.css">
 	<link rel="import" href="elements/lower-third/lower-third.html">
 	<link rel="import" href="elements/conference-logo/conference-logo.html">
+		<script src="../bower_components/gsap/src/minified/TweenMax.min.js"></script>
+		<script src="scripts/conference-logo.js"></script>
 	<style type="text/css">
 		    lower-third {
                 top: 0;
@@ -21,7 +23,10 @@
 <body>
 	<div class="main">
 		<lower-third></lower-third>
-		<conference-logo></conference-logo>
+		<div class="conference-bug">
+			<div id="colorLogo"><img src="img/color-logo.png" /></div>
+			<div id="ghostLogo"><img src="img/ghost-logo.png" /></div>
+		</div>
 	</div>
 </body>
 </html>
