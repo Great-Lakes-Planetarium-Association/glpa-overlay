@@ -18,7 +18,7 @@ body {
 }
 
 /* Lower Third CSS */
-#lower3rd {
+#lower-third {
     background: rgba(0, 0, 0, 0) url("img/lower-third.png") no-repeat bottom left;
     width: 1920px;
     height: 1080px;
