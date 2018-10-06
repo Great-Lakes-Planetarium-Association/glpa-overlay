@@ -1,16 +1,25 @@
 // Obtain NodeCG replicant
 const logoSelector = nodecg.Replicant('logoSelector');
 
-logoSelector.on('change', newVal => {
-    console.log(`logoSelector has changed to ${newVal}`);
-    if (newVal == 'color') {
-        TweenMax.to(this.$.colorLogo, 1, {opacity: 1});
-        TweenMax.to(this.$.ghostLogo, 1, {opacity: 0});
-    } else if (newVal == 'ghost') {
-        TweenMax.to(this.$.colorLogo, 1, {opacity: 0});
-        TweenMax.to(this.$.ghostLogo, 1, {opacity: 1});
-    } else {
-        TweenMax.to(this.$.colorLogo, 1, {opacity: 0});
-        TweenMax.to(this.$.ghostLogo, 1, {opacity: 0});
+logoSelector.on('change', visibleLogo => {
+    console.log(`logoSelector has changed to ${visibleLogo}`);
+    switch (visibleLogo) {
+        case 'color':
+            console.log('conference-logo: Enabling color bug.');
+            document.getElementById("color-bug").style.opacity = '1';
+            document.getElementById("ghost-bug").style.opacity = '0';
+            break;
+        
+        case 'ghost':
+            console.log("conference-logo: Enabling ghost bug.");
+            document.getElementById("color-bug").style.opacity = '0';
+            document.getElementById("ghost-bug").style.opacity = '1';
+            break;
+        
+        case 'off':
+            console.log("conference-logo: Hiding bug.");
+            document.getElementById("color-bug").style.opacity = '0';
+            document.getElementById("ghost-bug").style.opacity = '0';
+            break;
     }
 });
