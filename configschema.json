@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+
+    "properties": {
+        "conference": {
+            "type": "object",
+            "properties": {
+                "jsonUrl": {
+                    "type": "string",
+                    "description": "URL of the conference.json file containing conference data and schedules.",
+                    "default": "http://live.glpa.org/conference.json"
+                },
+                "pollInterval": {
+                    "type": "number",
+                    "description": "How often to poll the conference JSON file for updated session data in seconds.",
+                    "default": 30
+                }
+            }
+
+        },
+        "twitter": {
+            "type": "object",
+            "properties": {
+                "confHashtag": {
+                    "type": "string",
+                    "description": "The official conference Twitter hashtag.  Example: #glpa2018",
+                    "default": "#glpa2018"
+                }
+            }
+            
+        }
+    }
+}

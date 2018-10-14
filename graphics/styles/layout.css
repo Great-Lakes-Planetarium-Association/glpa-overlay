@@ -4,6 +4,7 @@
 html {
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -15,15 +16,49 @@ body {
     padding: 0;
 }
 
-/* Enforce a HD1080 resolution */
-.width1080 {
+.main {
     width: 1920px;
     height: 1080px;
 }
 
-/* Enforce a XGA resolution */
-.width768 {
-    width: 1024px;
-    height: 768px;
+/* Lower Third CSS */
+.lower-third {
+    background: rgba(0, 0, 0, 0) url("../img/lower-third.png") no-repeat bottom left;
+    width: 1920px;
+    height: 360px;
+    top: 720px;
+    position: absolute;
+    font-family: tahoma;
+    color: #ffffff;
+    opacity: 0;
 }
 
+.main-line {
+    float: left;
+    height: 240px;
+    width: 1700px;
+    padding-top: 80px;
+    padding-left: 50px;
+    font-size: 90px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.second-line	{
+    height: 120px;
+    width: 1700px;
+    padding-left: 80px;
+    font-size: 60px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+/* Conference Bug CSS */
+.conference-bug img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    opacity: 0;
+    transition-duration: 1s;
+}
